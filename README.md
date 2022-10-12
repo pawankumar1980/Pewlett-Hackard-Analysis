@@ -44,7 +44,7 @@ The process of data finalization involved
    
    The above reports give a good insight into the number of employees that are about to retire and hold specific titles. The additional breakdown department-wise will give a better understanding. In order to retrieve department name information, merged additional table departments into existing table retirement_titles with the inner join. After removing the duplicates, with the DISTINCT ON command, the table was ready to be used for additional queries.
    
-'''
+```
   SELECT DISTINCT ON (rt.emp_no) 
 	rt.emp_no,
 	rt.first_name,
@@ -59,7 +59,7 @@ INNER JOIN departments as d
 ON (d.dept_no = de.dept_no)
 ORDER BY rt.emp_no, rt.to_date DESC;
    
- '''
+ ```
    
    
 <img width="689" alt="Screen Shot 2022-10-12 at 16 00 46" src="https://user-images.githubusercontent.com/111800568/195437670-bd4f284c-1d21-4116-a84a-f26d16ec15e7.png">
@@ -69,7 +69,7 @@ ORDER BY rt.emp_no, rt.to_date DESC;
    
    The table of retirement titles contains all the information about the employees that are about to retire in the next four years. To get the number of positions that will be open in the next four years, I ran an additional query that breaks down how many staff will retire per department.
    
- '''
+ ```
  
  SELECT ut.dept_name, ut.title, COUNT(ut.title) 
 INTO rolls_to_fill
@@ -77,7 +77,7 @@ FROM (SELECT title, dept_name from unique_titles_department) as ut
 GROUP BY ut.dept_name, ut.title
 ORDER BY ut.dept_name DESC;
    
- '''
+ ```
    
 <img width="396" alt="Screen Shot 2022-10-12 at 16 01 39" src="https://user-images.githubusercontent.com/111800568/195439831-d194e72c-9233-41ea-81bd-59e6354369c8.png">
 
@@ -86,7 +86,7 @@ ORDER BY ut.dept_name DESC;
    
 I assumed that the mentors would be senior employees from departments. Basis this, ran a query with an additional filter that returns only employees in higher positions. With the command WHERE ut.title IN ('Senior Engineer', 'Senior Staff', 'Technique Leader', 'Manager'), the results include only staff in higher positions.
    
-'''
+```
    SELECT ut.dept_name, ut.title, COUNT(ut.title) 
 INTO mentoring_probables
 FROM (SELECT title, dept_name from unique_titles_department) as ut
@@ -94,7 +94,7 @@ WHERE ut.title IN ('Senior Engineer', 'Senior Staff', 'Technique Leader', 'Manag
 GROUP BY ut.dept_name, ut.title
 ORDER BY ut.dept_name DESC;
    
- '''
+ ```
  
 <img width="396" alt="Screen Shot 2022-10-12 at 16 01 39" src="https://user-images.githubusercontent.com/111800568/195442254-2e361f12-703d-4e42-a91b-9c15ef9b8785.png">
 
