@@ -630,7 +630,7 @@ emp_no,first_name,last_name,birth_date,from_date,to_date,title
 223595,Chiranjit,Dredge,1965-02-01,1999-09-05,9999-01-01,Technique Leader
 224135,Annemarie,Bressoud,1965-01-02,1998-06-23,9999-01-01,Engineer
 224335,Perry,Chachaty,1965-01-29,1985-07-22,9999-01-01,Senior Engineer
-224390,True,Shobatake,1965-01-24,1996-05-17,9999-01-01,Senior Staff
+224390,TRUE,Shobatake,1965-01-24,1996-05-17,9999-01-01,Senior Staff
 224934,George,Miake,1965-01-05,1988-01-02,9999-01-01,Senior Staff
 225438,Remmert,Quaggetto,1965-01-14,1992-04-28,9999-01-01,Senior Staff
 225601,Masasuke,Genin,1965-01-13,1994-06-25,9999-01-01,Engineer
@@ -711,7 +711,7 @@ emp_no,first_name,last_name,birth_date,from_date,to_date,title
 239748,Bilhanan,Dusink,1965-01-23,1988-06-04,9999-01-01,Senior Staff
 239803,Oscal,Ernst,1965-01-30,1992-05-19,9999-01-01,Senior Staff
 240132,Mizuhito,Kobara,1965-02-01,1996-08-09,9999-01-01,Senior Staff
-240236,True,Tischendorf,1965-01-24,1986-01-19,9999-01-01,Senior Engineer
+240236,TRUE,Tischendorf,1965-01-24,1986-01-19,9999-01-01,Senior Engineer
 240285,Kolar,Greenaway,1965-01-23,1998-11-14,9999-01-01,Staff
 240340,Mack,Staylopatis,1965-01-14,1985-04-02,9999-01-01,Senior Engineer
 240438,Temple,Cyre,1965-01-02,1992-09-30,9999-01-01,Senior Staff
